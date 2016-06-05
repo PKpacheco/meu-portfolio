@@ -15,7 +15,7 @@ class DadosPessoais(models.Model):
     email = models.EmailField(verbose_name='Email')
 
     conhecimentos = models.TextField(max_length=255, verbose_name='Conhecimentos')
-    github = models.CharField(max_length=100, verbose_name='Github')
+    github = models.CharField(max_length=100, default='http://github.com/SeuGit', verbose_name='Github')
     current_position = models.CharField(max_length=100, verbose_name='Cargo atual')
     empresa = models.CharField(max_length=100, verbose_name='Empresa')
 
