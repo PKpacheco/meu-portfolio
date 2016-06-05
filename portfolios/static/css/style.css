@@ -1,0 +1,82 @@
+.title{
+  font-family: 'Arial';
+
+}
+
+.container-fluid{
+  background-color: #0049BF;
+  padding: 30px;
+}
+
+#show{
+    color:white;
+}
+
+#show h1{
+  font-family: 'Arial';
+  font-weight: bold;
+  font-size:50px;
+}
+
+.negrit{
+  font-weight: bold;
+}
+
+.negrit2{
+  font-weight: 700;
+}
+
+#show p{
+  font-family: 'Arial';
+}
+
+#show a{
+  font-family: 'Arial', cursive;
+  text-decoration: none;
+  color:#00BFB2;
+  font-size: 20px;
+}
+
+#show a:hover{
+  text-decoration: none;
+  color:#6DBCB6;
+}
+
+.panel h2 {
+  font-family: 'Arial';
+}
+
+#show h3{
+  font-family: 'Arial';
+}
+
+.panel p {
+  font-size:15px;
+  font-family: 'Arial';
+}
+
+@media(max-width: 760px){
+  #show h1{
+  font-family: 'Arial', cursive;
+    font-weight: bold;
+    font-size:35px;
+  }
+
+  .panel h2 {
+    font-family: 'Arial', cursive;
+    font-size: 25px;
+  }
+
+  .panel p {
+    font-size:12px;
+    font-family: 'Arial', serif;
+  }
+
+  #show a{
+    font-family: 'Arial', cursive;
+    text-decoration: none;
+    color:#00BFB2;
+    font-size: 18px;
+  }
+
+
