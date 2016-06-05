@@ -10,84 +10,89 @@
 
 </head>
 
-<boby>
+<body>
 
     {% for pessoa in pessoa %}
-                <div class="container-fluid">
-                    <div class="section">
+
+        <div class="container-fluid">
+            <div class="section">
                 <div class="container" id="show">
-                        <div class="row">
-                  <div class="col-md-8">
-                    <h1>{{pessoa.name}}</h1>
-                    <h3>{{pessoa.current_position}}</h3>
-                    <p><a href="{{pessoa.github}}"> <i>Conheça meu repositorio<i></a></p>
-                </div>
-                </div>
-              </div>
-            </div>
-                </div>
-                <div class="section">
-                <div class="container">
                     <div class="row">
-                        <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h2>Dados Pessoais</h2>
-                                </div>
-                                <div class="panel-body">
-                                    
-                                    <p><span class="negrit">Data de nascimento : </span>{{pessoa.data_nascimento}}</p>
-                                    <p><span class="negrit">Endereço : </span>{{pessoa.adress}}</p>
-                                    <p><span class="negrit">Cidade :</span>{{pessoa.city}} <span class="negrit">cep: </span>{{pessoa.cep}}</p>
-                                    <p><span class="negrit">Tel :</span> {{pessoa.phone}} <span class="negrit"> Cel: </span>{{pessoa.mobile}}</p>
-                                    <p><span class="negrit">E-mail :</span>{{pessoa.email}}</p>
-                                </div>
-                     </div>
-                 </div>
+                        <div class="col-md-8">
+                            <h1>{{pessoa.name}}</h1>
+                            <h3>{{pessoa.current_position}}</h3>
+                            <p><a href="{{pessoa.github}}"> <i>Conheça meu repositorio<i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2>Dados Pessoais</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p><span class="negrit">Data de nascimento : </span>{{pessoa.data_nascimento}}</p>
+                            <p><span class="negrit">Endereço : </span>{{pessoa.adress}}</p>
+                            <p><span class="negrit">Cidade :</span>{{pessoa.city}} <span class="negrit">cep: </span>{{pessoa.cep}}</p>
+                            <p><span class="negrit">Tel :</span> {{pessoa.phone}} <span class="negrit"> Cel: </span>{{pessoa.mobile}}</p>
+                            <p><span class="negrit">E-mail :</span>{{pessoa.email}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="section">
+             <div class="container">
+                 <div class="row">
+                     <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 id="Conhecimentos">Conhecimentos</h2>
+                        </div>
+
+                        <div class="panel-body">
+                            <p>{{pessoa.conhecimentos|linebreaks}}</p>
+                        </div>
+                    </div>
+                </div>
              </div>
          </div>
 
-         <div class="section">
-         <div class="container">
-             <div class="row">
-                 <div class="panel panel-primary">
-                         <div class="panel-heading">
-                             <h2 id="Conhecimentos">Conhecimentos</h2>
-                         </div>
-                         <div class="panel-body">
-                             <p>{{pessoa.conhecimentos|linebreaks}}</p>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                     <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h2 id="Experencia">Experiência Profissional</h2>
                         </div>
-                     </div>
-                 </div>
+                        <div class="panel-body">
+                            <p><span class="negrit">Empresa : </span>{{pessoa.empresa}}</p>
+                            <p><span class="negrit">Cargo : </span>{{pessoa.current_position}}</p>
+                        </div>
+                    </div>
+                </div>
              </div>
+        </div>
 
-             <div class="section">
+         <div class="section">
              <div class="container">
                  <div class="row">
                      <div class="panel panel-primary">
                              <div class="panel-heading">
-                                 <h2 id="Experencia">Experiência Profissional</h2>
+                                 <h2 id="Resumo">Resumo</h2>
                              </div>
                              <div class="panel-body">
-                                 <p><span class="negrit">Empresa : </span>{{pessoa.empresa}}</p>
-                                 <p><span class="negrit">Cargo : </span>{{pessoa.current_position}}</p>
+                                 <p><span class="negrit"></span>{{pessoa.about}}</p>
                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="section">
-                 <div class="container">
-                     <div class="row">
-                         <div class="panel panel-primary">
-                                 <div class="panel-heading">
-                                     <h2 id="Resumo">Resumo</h2>
-                                 </div>
-                                 <div class="panel-body">
-                                     <p><span class="negrit"></span>{{pessoa.about}}</p>
-                                </div>
-                             </div>
-                         </div>
-                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     {% endfor %}
 
