@@ -9,6 +9,8 @@ if "%1"=="migrations" 	goto :migrations
 if "%1"=="user" 		goto :user
 if "%1"=="shell" 		goto :shell
 
+cls
+
 :clean
 	del *.pyc
 :migrate:
