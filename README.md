@@ -8,4 +8,4 @@ http://pt.slideshare.net/paolakatherine7/my-first-app-django
 
 O vídeo está em :
 
-https://www.youtube.com/watch?v=-NyehiqOsfs
+https://www.youtube.com/watch?v=GQAlToygG0A&t=3s
