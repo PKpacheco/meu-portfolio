@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+    rel="stylesheet" type="text/css">
+
+    <link href="{% static 'css/style.css' %}"rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    {% for person in person %}
+
+        <div class="container-fluid">
+            <div class="section">
+                <div class="container" id="show">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1>{{person.name}}</h1>
+                            <h3>{{person.current_position}}</h3>
+                            <p><a href="{{person.github}}"> <i>Find out more about my repository<i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2>Personal Data</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p><span class="negrit">Data of birth : </span>{{person.data_of_bith}}</p>
+                            <p><span class="negrit">Address : </span>{{person.adress}}</p>
+                            <p><span class="negrit">City :</span>{{person.city}} <span class="negrit">cep: </span>{{person.postal_code}}</p>
+                            <p><span class="negrit">Telephone :</span> {{person.phone}} <span class="negrit"> Cel: </span>{{person.mobile}}</p>
+                            <p><span class="negrit">E-mail :</span>{{person.email}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="section">
+             <div class="container">
+                 <div class="row">
+                     <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 id="Conhecimentos">Knowledge</h2>
+                        </div>
+
+                        <div class="panel-body">
+                            <p>{{person.knowledge|linebreaks}}</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                     <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h2 id="Experencia">Professional Experience</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p><span class="negrit">Empresa : </span>{{person.company}}</p>
+                            <p><span class="negrit">Cargo : </span>{{person.current_position}}</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+         <div class="section">
+             <div class="container">
+                 <div class="row">
+                     <div class="panel panel-primary">
+                             <div class="panel-heading">
+                                 <h2 id="Resumo">Sumary</h2>
+                             </div>
+                             <div class="panel-body">
+                                 <p><span class="negrit"></span>{{person.about}}</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% empty %}
+     <div class="alert alert-danger">
+         <h2>You haven't registered any information yet!!</h2>
+     </div>
+    {% endfor %}
+
+</body>
+</html>
